@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <title>Stoppetedet - Find os</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <div class="fixedBar">
+        <div class="header">
+            <div class="progress-container">
+                <div class="progress-bar" id="myBar"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        window.onscroll = function () {
+            myFunction()
+        };
+
+        function myFunction() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+        }
+    </script>
+
+    <nav>
+      <div class="wrapper">
+        <div class="topnav">
+        <a class="logo"></a>
+        <a href="index.html">Forside</a>
+        <a>Stoppestedet Odense</a>
+        <a>Vi tilbyder</a>
+        <a href="index.html">Frivillig</a>
+        <a class="active" href="findos.html">Find os</a>
+      </div>
+    </div>
+    </nav>
+
+    <div class="titel">
+      <p class="titeltekst">Her finder du os</p>
+    </div>
+
+    <div>
+    <h1 class="overskrift">Sådan kommer du ind.</h1>
+
+    <br>
+    <br>
+
+    <p class="guide">
+      1) Gå om til den hvide dør - bag Sushi Mania.<br>
+      <br>
+    Bag Sushi Mania er en hvid dør. Her holder vi til.
+    <br>
+    <br>
+    2) Åben døren, og ring på ved den blå dør.<br>
+    <br>
+    Bag den hvide dør, er en blå dør med en dørtelefon. Her skal ringe på, når du skal ind.
+    <br>
+    <br>
+    3) Du bliver lukket ind. Velkommen til Stoppestedet!
+    <br>
+    <br>
+    Vi lukker dig ind, når du har ringet på.
+    <br>
+    <br>
+    <br>
+    </p>
+  </div>
+
+  <div class="main-banner" id="main-banner">
+
+    <div class="imgban" id="imgban2">
+    </div>
+
+    <div class="imgban" id="imgban1">
+    </div>
+  </div>
+
+  <script>
+      var bannerStatus = 1;
+      var bannerTimer = 5000;
+
+      window.onload = function() {
+        bannerloop();
+      }
+
+      var startBanner = setInterval(function() {
+          bannerloop();
+      }, bannerTimer);
+
+      function bannerloop() {
+        if (bannerStatus === 1) {
+            setTimeout(function() {
+              document.getElementById("imgban1").style.right = "0px";
+              document.getElementById("imgban1").style.zIndex = "1000";
+              document.getElementById("imgban2").style.right = "-1200px";
+              document.getElementById("imgban2").style.zIndex = "1500";
+            }, 2500);
+            bannerStatus = 2;
+        }
+
+          else if (bannerStatus === 2) {
+              setTimeout(function() {
+                document.getElementById("imgban2").style.right = "0px";
+                document.getElementById("imgban2").style.zIndex = "1000";
+                document.getElementById("imgban1").style.right = "1200px";
+                document.getElementById("imgban1").style.zIndex = "500";
+              }, 2500);
+              bannerStatus = 1;
+          }
+        }
+
+  </script>
+
+  <br>
+  <br>
+  <br>
+
+    <div id=map></div>
+    <script>
+      function initMap(){
+        // placering
+        var options = {
+          zoom:17,
+          center:{lat:55.3979242493507, lng:10.384588984315263}
+        }
+
+        // nyt kort
+        var map = new google.maps.Map(document.getElementById('map'), options);
+
+        //markør//
+        var marker = new google.maps.Marker({
+          position:{lat:55.3979242493507, lng:10.384588984315263},
+          map:map
+        });
+
+        var infoWindow = new google.maps.InfoWindow({
+          content:'<p>Stoppestedet</p>'
+        });
+
+        marker.addListener('click', function(){
+          infoWindow.open(map, marker)
+        });
+      }
+    </script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC4eOnE9wcBc0q3lA0mQqNryUuC3tAF884&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+
+    <footer class="kolonner">
+
+      <br>
+      <p class="adresse">Adresse:</p><p>Jernbanegade 24B<br>5000 Odense C<br>info@stoppestedet.dk</p>
+      <br>
+      <br>
+      <p class="adresse">Telefon:</p><p>Værestedet Stoppestedet: 66 19 02 65<br>Kontor: 66 19 03 26</p>
+      <br>
+      <br>
+      <br>
+      <p class="adresse">Leder Birgit Boding:</p><p>Tlf.: 66 19 03 26/23 41 45 61<br>E-mail: bbhan@odense.dk</p>
+
+    </footer>
+  </body>
+</html>
