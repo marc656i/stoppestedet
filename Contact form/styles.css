@@ -1,0 +1,225 @@
+html {
+  min-height: 132%;
+}
+
+.wrappertitel {
+    margin: 0 auto;
+    width:62%;
+}
+
+nav {
+  width: 100%;
+  height: 140px;
+  position: absolute;
+  top: 0;
+  background-color: white;
+}
+
+.logo{
+  background-image: url(stoppestedet.png);
+  width: 220px;
+  height: 100%;
+  background-position: center;
+  background-size: contain;
+  margin-right: 90px;
+  margin-top: 10px;
+  background-repeat: no-repeat;
+}
+
+.topnav {
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 60px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: white;
+  color: #2ADBE9;
+}
+
+.topnav a.active {
+  background-color: white;
+  color: #2ADBE9;
+}
+
+.titel {
+  width: 100%;
+  height: 90px;
+  top: 140px;
+  position: absolute;
+  background-color: #992c1f;
+  text-align: center;
+}
+
+.titeltekst {
+  color: white;
+  font-size: 25px;
+  margin-bottom: 10px;
+  margin-top: 30px;
+} 
+
+#map {
+  height:600px;
+  width:400px;
+  position: absolute;
+  left: 30px;
+  top: 300px;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body{
+  background: #eaeaea;
+}
+
+.wrapper{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  max-width: 80%;
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 4px 4px 2px #e0dfdf; 
+  margin-top: 80px;
+}
+
+.wrapper h2{
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #332902;
+}
+
+.wrapper .input_field{
+  margin-bottom: 10px;
+}
+
+.wrapper .input_field input[type="text"],
+.wrapper textarea{
+  border: 1px solid #e0e0e0;
+  width: 100%;
+  padding: 10px;
+}
+
+.wrapper textarea{
+  resize: none;
+  height: 80px;
+}
+
+.wrapper .btn input[type="submit"]{
+  border: 0px;
+  margin-top: 15px;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  background: #24939c;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+#error_message{
+  margin-bottom: 20px;
+  background: #9c382b;
+  padding: 0px;
+  text-align: center;
+  font-size: 14px;
+  transition: all 0.5s ease;
+}
+
+.main-banner {
+  margin: 0 auto;
+  width: 80%;
+  height: 250px;
+  background-color: #eaeaea;
+  overflow: hidden;
+  position: absolute;
+  margin-left: 10%;
+  margin-top: 53%;
+}
+
+.main-banner .imgban {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  transition: all ease-in-out 2000ms;
+  -webkit-transition: all ease-in-out 2000ms;
+  -moz-transition: all ease-in-out 2000ms;
+}
+
+.main-banner #imgban2 {
+  background-image: url(img/banners2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main-banner #imgban1 {
+  background-image: url(img/banners1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.kolonner {
+  column-count: 3;
+  font-size: 17px;
+  line-height: 30px;
+  text-align: center;
+  color: grey;
+  column-fill: auto;
+}
+
+footer{
+  bottom:0;
+  width:100%;
+  height:250px;
+  color: #2f343a;
+  background-color: #21242a;
+  text-align: center;
+  float: left;
+  position: absolute;
+  bottom: 0;
+  top: 132%;
+}
+
+.adresse {
+  color: white;
+}
+
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #eaeaea;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #992c1f;
+  width: 0%;
+}

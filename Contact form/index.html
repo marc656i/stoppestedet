@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bliv frivillig hos Stoppestedet</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+</head>
+
+<body>
+
+    <div class="fixedBar">
+        <div class="header">
+            <div class="progress-container">
+                <div class="progress-bar" id="myBar"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav>
+        <div class="wrappertitel">
+            <div class="topnav">
+                <a class="logo" href="index.html"></a>
+                <a>Forside</a>
+                <a>Stoppestedet Odense</a>
+                <a>Vi tilbyder</a>
+                <a class="active" href="index.html">Frivillig</a>
+                <a href="findos.html">Find os</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="titel">
+        <p class="titeltekst">Bliv frivillig hos Stoppestedet</p>
+    </div>
+
+
+    <div class="wrapper">
+        <h2>Ansøg her</h2>
+        <div id="error_message"></div>
+        <form id="myform" onsubmit="return validate();">
+            <div class="input_field">
+                <input type="text" placeholder="Navn" id="name">
+            </div>
+            <div class="input_field">
+                <input type="text" placeholder="Emne" id="subject">
+            </div>
+            <div class="input_field">
+                <input type="text" placeholder="Mobil" id="phone">
+            </div>
+            <div class="input_field">
+                <input type="text" placeholder="Email" id="email">
+            </div>
+            <div class="input_field">
+                <textarea
+                    placeholder="Din ansøgning (skal indeholde informationer om erfaring, motivation, kendskab til psykiske lidelser samt kompetencer indenfor feltet.) "
+                    id="message"></textarea>
+            </div>
+            <div class="btn">
+                <input type="submit">
+            </div>
+        </form>
+    </div>
+
+
+
+    <div class="main-banner" id="main-banner">
+
+        <div class="imgban" id="imgban2">
+        </div>
+
+        <div class="imgban" id="imgban1">
+        </div>
+    </div>
+
+    <footer class="kolonner">
+
+        <br>
+        <br>
+        <p class="adresse">Adresse:</p>
+        <p>Jernbanegade 24B<br>5000 Odense C<br>info@stoppestedet.dk</p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p class="adresse">Telefon:</p>
+        <p>Værestedet Stoppestedet: 66 19 02 65<br>Kontor: 66 19 03 26</p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p class="adresse">Leder Birgit Boding:</p>
+        <p>Tlf.: 66 19 03 26/23 41 45 61<br>E-mail: bbhan@odense.dk</p>
+
+    </footer>
+
+</body>
+
+</html>
